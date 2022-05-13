@@ -1,14 +1,13 @@
 # My Awesome Project
 
-You will be given a number and you will need to return it as a string in Expanded Form. For example:
+You will be given a number and you will need to return it as a string in Expanded Form. For example:<br>
 
-expandedForm(12); // Should return '10 + 2'
-expandedForm(42); // Should return '40 + 2'
-expandedForm(70304); // Should return '70000 + 300 + 4'
+expandedForm(12); // Should return '10 + 2'<br>
+expandedForm(42); // Should return '40 + 2'<br>
+expandedForm(70304); // Should return '70000 + 300 + 4'<br>
 
-NOTE: All numbers will be whole numbers greater than 0.
+NOTE: All numbers will be whole numbers greater than 0.<br>
 
-alt tag
 How It's Made:
 
 Tech used: JavaScript
@@ -20,17 +19,17 @@ Optimizations
 
 
 **Link to project:**
-Here was my final answer:
-function expandedForm(num) {
-  let arr = num.toString().split('')
-  let expand = []
-  arr.forEach((x, ind) => {
-    if (x > 0) {
-      expand.push(x * (10**((arr.length - 1) - ind )))
-    }
-  })
-  return expand.join(' + ')
-}
+Here was my final answer:<br>
+function expandedForm(num) {<br>
+  let arr = num.toString().split('')<br>
+  let expand = []<br>
+  arr.forEach((x, ind) => {<br>
+    if (x > 0) {<br>
+      expand.push(x * (10**((arr.length - 1) - ind )))<br>
+    }<br>
+  })<br>
+  return expand.join(' + ')<br>
+}<br>
 
 ![alt tag](http://placecorgi.com/1200/650)
 
