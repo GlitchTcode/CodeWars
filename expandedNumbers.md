@@ -31,5 +31,6 @@ function expandedForm(num) {<br>
   return expand.join(' + ')<br>
 }<br>
 
+Bonus Corgi:
 ![alt tag](http://placecorgi.com/1200/650)
 
