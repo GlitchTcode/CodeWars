@@ -1,0 +1,33 @@
+function isValidWalk(walk) {
+//Quite possibly the messiest solution in existence
+//Create object to give value to direction
+const distVal = {
+    n: 1, 
+    s: -1, 
+    w: -1, 
+    e: 1}
+//Break the initial array into N,S and W,E and convert to number value
+  let compareN = walk.filter(ele => ele == 'n' || ele == 's').map(x => distVal[x] )
+  let compareW = walk.filter(ele => ele == 'w' || ele == 'e').map(x => distVal[x] )
+  
+//If the broken down arrays are longer than 0 then reduce to final result for each array otherwise fill with a 0 to signify no movement
+  if (compareN.length > 0) {
+    compareN = compareN.reduce((a,b) => a+b)
+  } else {
+    compareN.push(0)
+  }
+  if (compareW.length > 0) {
+    compareW = compareW.reduce((a,b) => a+b)
+  } else {
+    compareW.push(0)
+  }
+  //Run comparison if walk is longer that 10 steps
+  if (walk.length < 10 || walk.length > 10){
+    return false
+  } else {
+    if (compareN == 0 && compareW == 0) {
+      return true
+    } else {
+      return false
+    }
+  }}
