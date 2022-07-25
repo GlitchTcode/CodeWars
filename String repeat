@@ -1,0 +1,13 @@
+namespace Solution
+{
+  public static class Program
+  {
+    public static string RepeatStr(int n, string s)
+    {
+      string str = "";
+      for(int i = 1; i <= n; i++ ){
+        str += s;
+      } return str;
+    }
+  }
+}
