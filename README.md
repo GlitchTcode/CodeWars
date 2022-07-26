@@ -1,12 +1,12 @@
 # CodeWars!
-A repository filled with codewars challenges (kata). Currently Ranked #1305 on the global leaderboard, Completed over 1000+ challenges and Push 5 solutions every week.
+A repository filled with codewars challenges (kata). 
 
 Bonus Corgi
 ![alt tag](http://placecorgi.com/1200/650)
 
 ## How It's Made:
 
-Tech used: JavaScript
+Tech used: JavaScript and C#
 
 Solving different coding challenges keeps your skills sharp.
 
