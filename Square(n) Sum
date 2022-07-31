@@ -1,0 +1,12 @@
+public static class Kata
+{
+  public static int SquareSum(int[] n)
+  { 
+    int sum = 0;
+    foreach (int a in n){
+          int b = a*a;
+          sum+= b;
+    }
+    return sum;
+  }
+}
