@@ -1,0 +1,10 @@
+using System;
+
+public static class Kata
+{
+    public static string Disemvowel(string str)
+    {
+        string disemvoweled = System.Text.RegularExpressions.Regex.Replace(str, "[aeiouAEIOU]", "");
+      return disemvoweled;
+    }
+}
