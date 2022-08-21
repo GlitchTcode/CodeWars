@@ -1,0 +1,13 @@
+using System;
+
+
+public class Kata
+{
+    public static string Remove_char(string s)
+    {
+      char[] temp = new char[s.Length-2];
+        s.CopyTo(1, temp, 0, s.Length-2);
+        string result = new string(temp).Trim(' ');
+        return result;
+    }
+}
