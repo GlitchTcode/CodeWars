@@ -1,0 +1,11 @@
+public class Kata
+{
+  public static int Grow(int[] x)
+  {
+    int result=1;
+    foreach(int num in x){
+      result *= num;
+    }
+    return result;
+  }
+}
