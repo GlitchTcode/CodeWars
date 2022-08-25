@@ -1,0 +1,21 @@
+using System;
+public class Kata
+{
+  public static string GetMiddle(string s)
+  {
+    string result ="duh";
+		if (s.Length % 2 != 0)
+		{
+			//answer[0] = s[s.Length / 2];
+			result = s.Substring(s.Length / 2, 1);
+
+		}
+		else
+		{
+			result = s.Substring(s.Length / 2 -1, 2);
+
+		}
+		return result;
+  }
+}
+
