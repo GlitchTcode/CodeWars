@@ -1,0 +1,20 @@
+using System;
+using System.Text.RegularExpressions;
+
+public class Printer 
+{
+    public static string PrinterError(string s) 
+    {
+      int duds = 0;
+		foreach(Match match in Regex.Matches(s, "[n-zN-Z]"))
+        {
+            if (match.Value !=null)
+            {
+				duds++;
+            }
+        }
+		string printer_error = duds + "/" + s.Length;
+		return printer_error;
+        
+    }
+}
