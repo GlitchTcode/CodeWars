@@ -18,3 +18,18 @@ public class Printer
         
     }
 }
+
+
+//ALTERNATIVE
+
+using System;
+using System.Text.RegularExpressions;
+
+public class Printer 
+{
+    private const string pattern = @"[^a-m]";
+    public static string PrinterError(String s) 
+    {
+        return $"{Regex.Matches(s, pattern).Count}/{s.Length}";
+    }
+}
