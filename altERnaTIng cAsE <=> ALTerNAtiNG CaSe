@@ -1,0 +1,46 @@
+using System;
+
+namespace Extensions
+{
+  public static class StringExt
+  {
+    public static string ToAlternatingCase (this string s)
+    {
+        char[] result = new char[s.Length];
+        char[] temp = s.ToCharArray();
+        int counter=0;
+        foreach (char that in temp)
+          {
+
+              if (Char.IsUpper(that))
+              {
+                  result[counter] = Char.ToLower(that);
+                  counter++;
+              }
+              else
+              {
+                  result[counter] = Char.ToUpper(that);
+                  counter++;
+              }
+          }
+          string answer = new string(result);
+          return answer;
+    }
+  }
+}
+
+//REFACTORED! I think it's less readable but fun to come up with
+
+using System;
+using System.Linq;
+
+namespace Extensions
+{
+  public static class StringExt
+  {
+    public static string ToAlternatingCase (this string s)
+    {
+      return new String(s.Select(c => (char.IsUpper(c) ? char.ToLower(c) : char.ToUpper(c))).ToArray());
+    }
+  }
+}
