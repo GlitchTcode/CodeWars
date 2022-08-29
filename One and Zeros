@@ -1,0 +1,34 @@
+using System;
+using System.Collections.Generic;
+
+namespace Solution
+{
+  class Kata
+    {
+      public static int binaryArrayToNumber(int[] BinaryArray)
+        {
+          string num = string.Empty;
+          foreach (var item in BinaryArray)
+          {
+              num += item.ToString();
+          }
+          return Convert.ToInt32(num,2);
+        }
+    }
+}
+
+
+//Using Linq
+using System;
+using System.Linq;
+
+namespace Solution
+{
+  class Kata
+    {
+      public static int binaryArrayToNumber(int[] b)
+        {
+          return Convert.ToInt32(b.Aggregate("",(acc, n) => acc + n.ToString()),2); 
+        }
+    }
+}
