@@ -1,0 +1,31 @@
+namespace Converter {
+  public class Converter
+  {
+    public string dnaToRna(string dna)
+    {
+      char[] chars = dna.ToCharArray();
+        for (int i = 0; i < chars.Length; i++)
+        {
+            if (chars[i] == 'T')
+            {
+                chars[i] = 'U';
+            }
+        }
+        string result = new string(chars);
+        return result;
+      
+    }
+  }
+}
+
+//More concise and can't believe I didn't think of it before I submitted:
+
+namespace Converter {
+  public class Converter
+  {
+    public string dnaToRna(string dna)
+    {
+      return dna.Replace('T', 'U');
+    }
+  }
+}
